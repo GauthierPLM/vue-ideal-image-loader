@@ -5,7 +5,7 @@
 <script>
     export default {
         name: "responsive-img",
-        props: ["alt", "src"],
+        props: ["src"],
         data() {
             return {
                 fallbackSrc: "",
@@ -13,10 +13,12 @@
             }
         },
         created() {
-            // eslint-disable-next-line no-console
-            console.log(this.src);
-            this.fallbackSrc = this.src.x1.src;
-            this.srcset = buildSrcset(this.src);
+            if (this.src.x1) {
+                this.fallbackSrc = this.src.x1.src;
+                this.srcset = buildSrcset(this.src);
+            } else {
+                this.fallbackSrc = this.src;
+            }
         }
     }
 
@@ -39,7 +41,3 @@
         ].filter(value => value !== "").join(", ");
     }
 </script>
-
-<style scoped>
-
-</style>
