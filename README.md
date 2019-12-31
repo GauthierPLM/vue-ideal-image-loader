@@ -1,24 +1,17 @@
-# vue-ideal-image-loader
+# ideal-image-loader for VueJS
 
-## Project setup
-```
-yarn install
-```
+This repository contains an example of project using VueJS and
+[@brigad/ideal-image-loader](https://github.com/Brigad/ideal-image-loader).
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+For more details about the purpose of [@brigad/ideal-image-loader](https://github.com/Brigad/ideal-image-loader),
+see their repository.
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## Adding @brigad/ideal-image-loader to the project
 
-### Lints and fixes files
-```
-yarn lint
-```
+You can easily add ideal-image-loader to your project by adding it to your `vue.config.js` and removing previous loaders
+ as shown in [this example](./vue.config.js).
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Component Example
+
+A simple component example generating the correct `srcset` attributes and using wepb images can be found
+[here](./src/components/ResponsiveImg.vue).
