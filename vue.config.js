@@ -1,7 +1,11 @@
 module.exports = {
     chainWebpack: config => {
-        config.module
-            .rule("images")
+        const images = config.module
+            .rule("images");
+
+        images.uses.clear();
+
+        images
             .use("@brigad/ideal-image-loader")
             .loader("@brigad/ideal-image-loader")
             .options({
