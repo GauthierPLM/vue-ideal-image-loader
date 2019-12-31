@@ -1,16 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <responsive-img alt="Vue logo" :src="VueLogo" />
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import ResponsiveImg from "./components/ResponsiveImg";
+import VueLogo from "./assets/logo.png";
 
 export default {
   name: 'app',
+  data() {
+    return {
+      VueLogo: VueLogo
+    }
+  },
   components: {
+    ResponsiveImg,
     HelloWorld
   }
 }
